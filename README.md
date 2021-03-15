@@ -47,3 +47,10 @@ sudo certbot certonly --standalone
 ```
 docker-compose up
 ```
+
+## Multi CA support
+
+it's possible to use client certs issued by multiple CAs, in that case just chain CAs in one file and provide it in nginx config
+```
+ssl_client_certificate /etc/nginx/client_certs/ca-multi.crt;
+```
